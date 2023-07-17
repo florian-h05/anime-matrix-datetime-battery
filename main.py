@@ -11,8 +11,6 @@ import psutil
 import time
 from datetime import datetime
 
-from pynput import keyboard
-
 # VARS
 
 fontname   = "Hack-Regular.ttf" # Font (must be in same directory)
@@ -60,27 +58,9 @@ def cleanup(signal, frame):
 	system("asusctl anime -e false") # Turn off matrix on sigint
 	sys.exit(0)
 
-def on_press(key):
-	try: # Get keycode
-		vk = key.vk
-	except AttributeError:
-		vk = key.value.vk
-	if vk == keybind:
-		global active
-		active = not active # Invert active state
-		if active:
-			system("asusctl anime -e true") # Enable display
-			main() # Update display
-		else:
-			system("asusctl anime -e false") # Disable display
-
 if __name__ == "__main__":
 	system("asusctl anime -e true") # Enable display
 	signal.signal(signal.SIGINT, cleanup) # Register SIGINT handler
-	listener = keyboard.Listener( # Register keyboard listener
-		on_press=on_press
-	)
-	listener.start()
 	while True:
 		if active :
 			main()

@@ -1,6 +1,5 @@
 DateTime==5.1
 Pillow==10.0.0
-pynput==1.7.6
 pytz==2021.3
 six==1.16.0
 zope.interface==5.4.0

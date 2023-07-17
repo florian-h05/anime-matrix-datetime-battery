@@ -1,0 +1,3 @@
+# sudoers.d file to allow the user to control the AniMe matrix systemd service
+%USER ALL= NOPASSWD: /bin/systemctl stop anime-matrix-datetime-battery
+%USER ALL= NOPASSWD: /bin/systemctl start anime-matrix-datetime-battery
