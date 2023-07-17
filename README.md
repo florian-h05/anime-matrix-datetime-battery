@@ -24,5 +24,3 @@ Use the ROG button (M4) to turn the AniMe matrix off and on.
 ## Credits
 
 [Blobadoodle](https://github.com/Blobadoodle) for creating the original repo [Blobadoodle/anime-matric-clock](https://github.com/Blobadoodle/anime-matrix-clock)!
-
-![ga401qc](.github/laptop.png)
