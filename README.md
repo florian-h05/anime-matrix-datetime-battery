@@ -16,7 +16,7 @@ This works by creating an image with the current data every second and sending i
 
 # Usage
 
-You can switch the AniMe matrix on and off by clicking on the ROG key (M4).
+To turn off the AniMe Matrix, just stop the service with `sudo systemctl stop anime-matrix-datetime-battery`.
 
 ## Credits
 
