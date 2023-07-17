@@ -15,7 +15,7 @@ This works by creating an image with the current data every second and sending i
 1. Copy the systemd service file with `sudo cp anime-matrix-datetime-battery.service /etc/systemd/system`
 1. Enable and start the service with `sudo systemctl enable --now anime-matrix-datetime-battery`
 1. Copy the `sudoers.d` file with `sudo cp anime-matrix-datetime-battery /etc/sudoers.d/`
-1. Add a keyboard shortcut to your desktop environment, e.g. KDE: Settings -> Shortcuts -> Add command -> Paste "bash bash /opt/anime-matrix-datetime-battery/rog-shortcut.bash" -> Add the ROG button as shortcut
+1. Add a keyboard shortcut to your desktop environment, e.g. KDE: Settings -> Shortcuts -> Add command -> Paste "bash bash /opt/anime-matrix-datetime-battery/toggle-service.bash" -> Add the ROG button as shortcut
 
 # Usage
 
