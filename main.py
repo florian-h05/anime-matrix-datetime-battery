@@ -23,8 +23,7 @@ keybind    = 269025089 # XF86Launch3
 
 # END VARS
 
-fontl = ImageFont.truetype(fontname, 10) # Register large font
-fonts = ImageFont.truetype(fontname, 8) # Register small font
+font = ImageFont.truetype(fontname, 10) # Register large font
 W,H = (width, height)
 
 active = True
@@ -35,7 +34,7 @@ def main():
 	strdate = now.strftime("%d.%m.") # Get date string
 	strbattery = str(round(psutil.sensors_battery().percent)) + "%" # Get battery level in percent
 
-        # Create new image
+    # Create new image
 	img = Image.new("RGB", (width, height))
 	draw = ImageDraw.Draw(img)
 
@@ -46,9 +45,9 @@ def main():
 	#print("Calculated centered position:", (W-w)/2, (H-h)/1.1)
 
 	# Draw text
-	draw.text((9.0, 24.5), strtime, textcolour, font=fontl) # Time
-	draw.text((18.5, 15.5), strdate, textcolour, font=fonts) # Date
-	draw.text((27.5, 6.5), strbattery, textcolour, font=fonts) # Battery
+	draw.text((8.0, 26.5), strtime, textcolour, font=font) # Time
+	draw.text((17.5, 17.25), strdate, textcolour, font=font) # Date
+	draw.text((25.5, 8.0), strbattery, textcolour, font=font) # Battery
 
 	img.save("pixel.gif")
 
