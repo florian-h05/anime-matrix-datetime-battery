@@ -59,6 +59,7 @@ def cleanup(signal, frame):
 
 if __name__ == "__main__":
 	system("asusctl anime -e true") # Enable display
+	system("asusctl anime -i 0.5") # Set brightness
 	signal.signal(signal.SIGINT, cleanup) # Register SIGINT handler
 	while True:
 		if active :
