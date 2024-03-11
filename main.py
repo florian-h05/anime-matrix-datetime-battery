@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+# Copyright (c) 2022 Blobadoodle & 2023 Florian Hotze under MIT License
+
+""" ASUS AniMe Matrix DateTime Battery """
+""" This script displays the current data, time and battery level on the AniMe matrix of ASUS ROG notebooks. """
+
 from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
@@ -54,12 +60,11 @@ def main():
 	system(command) # Update matrix
 
 def cleanup(signal, frame):
-	system("asusctl anime -e false") # Turn off matrix on sigint
+	system("asusctl anime -c") # Clear the matrix
 	sys.exit(0)
 
 if __name__ == "__main__":
-	system("asusctl anime -e true") # Enable display
-	system("asusctl anime -i 0.5") # Set brightness
+	system("asusctl anime -b med") # Set brightness
 	signal.signal(signal.SIGINT, cleanup) # Register SIGINT handler
 	while True:
 		if active :

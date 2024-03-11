@@ -3,6 +3,8 @@
 This script is designed to be used with asusctl to use the AniMe matrix on the Asus ROG Matrix laptops to show the current battery level, date and time.\
 This works by creating an image with the current data every second and sending it to the display with asusctl.
 
+Verified to work on ASUS ROG Zephyrus G14 2022 GA402RK with Fedora 39 and `asusctl` version 5.0.8.
+
 # Install
 
 1. Ensure you have [`asusctl`](https://asus-linux.org/asusctl/), `python3` and `pip` installed
